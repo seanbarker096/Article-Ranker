@@ -47,7 +47,9 @@ require('./services/passport.js');
 
 const app = express();
 //sets http headers for security
-app.use(helmet());
+//have removed this due to issues with Create REact app not using the INLINE_RUNTIME_CHUNK
+//env variable i specified
+// app.use(helmet());
 app.use(cors());
 //handle pre-flight requests for all routes
 app.options('*', cors());
