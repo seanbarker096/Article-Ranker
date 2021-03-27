@@ -30,7 +30,7 @@
 const express = require('express');
 const passport = require('passport');
 const path = require('path');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const helmet = require('helmet');
 const mongoSanitise = require('express-mongo-sanitize');
 const xss = require('xss-clean');
