@@ -52,9 +52,9 @@ app.use(cors());
 //handle pre-flight requests for all routes
 app.options('*', cors());
 
-if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));
-}
+// if (process.env.NODE_ENV === 'development') {
+//     app.use(morgan('dev'));
+// }
 
 //allows our app to parse post request forms into JSON objects. Adds data to req.body
 app.use(express.json());
