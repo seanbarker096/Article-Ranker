@@ -66,12 +66,13 @@
 //     });
 // });
 
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
+// const res = dotenv.config();
+require('dotenv').config();
 const mongoose = require('mongoose');
 const app = require('./app');
 const failedApp = require('./appFailure');
 //allows use to access config variables throughout our app
-dotenv.config({ path: './config.env' });
 
 //NODE ERROR HANDLING
 process.on('uncaughtException', (err) => {
