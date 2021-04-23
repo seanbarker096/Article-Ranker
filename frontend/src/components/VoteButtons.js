@@ -74,13 +74,13 @@ const VoteButtons = ({
                 </span>
                 <button
                     style={{ marginBottom: 5 }}
-                    className="ui mini right floated icon button"
+                    className="ui mini icon button voteButton"
                     id="upVote"
                 >
                     <i className="angle up icon" id="upVote"></i>
                 </button>
                 <button
-                    className="mini ui right floated icon button "
+                    className="mini ui icon button voteButton"
                     id="downVote"
                 >
                     <i className="angle down icon" id="downVote"></i>

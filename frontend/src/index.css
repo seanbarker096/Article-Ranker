@@ -41,6 +41,13 @@ a {
     align-self: flex-end;
 }
 
+.voteButton {
+    background-color: rgba(158, 233, 233, 0.713) !important;
+    margin: 0.2rem 0 !important;
+}
+.voteButton i {
+    color: white;
+}
 .voteButtons {
     display: flex;
     flex-direction: column;
