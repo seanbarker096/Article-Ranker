@@ -18,6 +18,7 @@ const AjaxForm = new ajaxForm('articles');
 
 const Article = ({
     tags,
+    url,
     title,
     author,
     description,
@@ -63,10 +64,14 @@ const Article = ({
         <div className="article">
             <div className="article_articleMain">
                 <h2 className="article_heading">{title}</h2>
-                <div className="ui primary button article_viewArticleButton">
-                    View full article
+                <a
+                    href={url}
+                    target="_blank"
+                    className="ui primary button article_viewArticleButton"
+                >
+                    Read the full article
                     <i className="right chevron icon"></i>
-                </div>
+                </a>
                 <div className="image">
                     <i className="ui newspaper outline icon huge" />
                 </div>
