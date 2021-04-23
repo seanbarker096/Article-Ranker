@@ -60,40 +60,34 @@ const Article = ({
     };
 
     return (
-        <div className="ui segment">
-            <h2 className="ui left floated header">{title}</h2>
-            <div className="ui right floated primary button">
-                View full article
-                <i className="right chevron icon"></i>
-            </div>
-            <div className="ui clearing divider"></div>
-            <div className="item">
+        <div className="article">
+            <div className="article_articleMain">
+                <h2 className="article_heading">{title}</h2>
+                <div className="ui primary button article_viewArticleButton">
+                    View full article
+                    <i className="right chevron icon"></i>
+                </div>
                 <div className="image">
                     <i className="ui newspaper outline icon huge" />
                 </div>
-                <div className="content">
-                    <VoteButtons
-                        onSubmitActionCreator={voteOnArticle}
-                        parentResourceType="articles"
-                        parentId={articleId}
-                        errorType={'VOTE_ON_ARTICLE_ERROR'}
-                        handleVoteError={handleVoteError}
-                    />
-                    <div className="meta">
-                        <span className="author">{author}</span>
+                <div className="article_content">
+                    <div className="article_content--left">
+                        <span className="author">Author: {author}</span>
+                        <p>Description: {description}</p>
+                        <div className="extra">{renderTags()}</div>
                     </div>
-                    <div className="description">
-                        <p>{description}</p>
+                    <div className="article_content--right">
+                        <VoteButtons
+                            onSubmitActionCreator={voteOnArticle}
+                            parentResourceType="articles"
+                            parentId={articleId}
+                            errorType={'VOTE_ON_ARTICLE_ERROR'}
+                            handleVoteError={handleVoteError}
+                        />
                     </div>
-                    <div className="extra">{renderTags()}</div>
                 </div>
-                <div className="ui comments">
-                    <h3 className="ui grey header">Comments</h3>
-                    <CommentList articleId={articleId} />
-                </div>
-                {renderError()}
                 <OwnerContent ownerId={owner._id}>
-                    <div className="owner-options inline">
+                    <div className="owner-options inline article_ownerContent">
                         <button
                             className="ui button red"
                             onClick={(e) =>
@@ -111,6 +105,11 @@ const Article = ({
                     </div>
                 </OwnerContent>
             </div>
+            <div className="ui comments article_comments" id="comments">
+                <h3 className="ui grey header">Comments</h3>
+                <CommentList articleId={articleId} />
+            </div>
+            {renderError()}
         </div>
     );
 };

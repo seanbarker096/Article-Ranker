@@ -410,7 +410,17 @@ exports.protect = catchAsync(async (req, res, next) => {
             )
         );
     }
-    const decoded = await jwtToken.verify(userToken);
+    let decoded;
+    try {
+        decoded = await jwtToken.verify(userToken);
+    } catch (err) {
+        return next(
+            new AppError(
+                'You must be signed in to complete this action. If you are not already signed in, please sign in. Otherwise, please try signing in again.'
+            )
+        );
+    }
+
     //check if user associated with token still exists
     const user = await User.findById(decoded.id);
     if (!user)

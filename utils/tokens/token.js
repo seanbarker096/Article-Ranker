@@ -62,7 +62,7 @@ class Token {
 
     async verify(token) {
         //verify using jwt module
-        return await jwt.verify(token, this.secretOrPrivateKey);
+        return await promisify(jwt.verify)(token, this.secretOrPrivateKey);
     }
 }
 
