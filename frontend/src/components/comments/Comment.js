@@ -69,8 +69,6 @@ const Comment = (props) => {
                             }
                         />
                     </div>
-
-                    {renderError()}
                 </div>
                 <OwnerContent ownerId={props.owner._id}>
                     <div
@@ -80,8 +78,7 @@ const Comment = (props) => {
                         <div className="column">
                             <a
                                 onClick={(event) => setEditCommentClick(true)}
-                                style={{ color: 'grey' }}
-                                className="item"
+                                className="item comment_ownerOptionLink"
                             >
                                 Edit
                             </a>
@@ -89,14 +86,14 @@ const Comment = (props) => {
                         <div className="column">
                             <a
                                 onClick={(e) => onDeleteClick(e, commentId)}
-                                style={{ color: 'grey' }}
-                                className="item"
+                                className="item comment_ownerOptionLink"
                             >
                                 Delete
                             </a>
                         </div>
                     </div>
                 </OwnerContent>
+                {renderError()}
             </div>
         );
     }

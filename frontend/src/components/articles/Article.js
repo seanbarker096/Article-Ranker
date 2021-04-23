@@ -106,7 +106,9 @@ const Article = ({
                 </OwnerContent>
             </div>
             <div className="ui comments article_comments" id="comments">
-                <h3 className="ui grey header">Comments</h3>
+                <h3 className="ui grey header" id="comments_heading">
+                    Comments
+                </h3>
                 <CommentList articleId={articleId} />
             </div>
             {renderError()}

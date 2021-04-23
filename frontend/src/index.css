@@ -20,10 +20,11 @@ a {
 
 .article {
     padding-bottom: 1rem;
-    border-bottom: 3px rgba(89, 88, 88, 0.2) solid;
+    border-bottom: 5px rgba(89, 88, 88, 0.2) solid;
 }
 .article_articleMain {
     background-color: rgba(90, 225, 255, 0.1);
+    border-bottom: 3px rgba(89, 88, 88, 0.1) solid;
     border-radius: 4px;
     padding: 1rem;
 }
@@ -41,9 +42,20 @@ a {
     align-self: flex-end;
 }
 
-.voteButton {
-    background-color: rgba(158, 233, 233, 0.713) !important;
+.voteButton#upVote {
+    background-color: rgba(158, 233, 233, 0.713);
     margin: 0.2rem 0 !important;
+}
+.voteButton#downVote {
+    background-color: rgba(158, 233, 233, 0.713);
+    margin: 0.2rem 0 !important;
+}
+
+.voteButton#downVote:hover {
+    background-color: rgb(21, 217, 201);
+}
+.voteButton#upVote:hover {
+    background-color: rgb(21, 217, 201);
 }
 .voteButton i {
     color: white;
@@ -65,8 +77,12 @@ a {
 
     margin: 1rem 0;
     max-width: 100%;
+    /* background-color: rgba(90, 225, 255, 0.1); */
 }
 
+#comments_heading {
+    background-color: white;
+}
 .comment_addCommentButton {
     background-color: red;
 }
@@ -80,8 +96,10 @@ a {
     padding: 0.5rem;
 }
 .comment_container {
-    background-color: rgba(90, 225, 255, 0.1);
     border-radius: 5px;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px rgba(89, 88, 88, 0.1) solid;
 }
 .comment_contentMain {
     display: flex;
@@ -112,4 +130,12 @@ a {
 
 #comment_ownerOptions {
     margin-left: 0;
+}
+
+.comment_ownerOptionLink {
+    color: grey;
+}
+
+.comment_ownerOptionLink:hover {
+    color: rgb(21, 217, 201);
 }

@@ -89,8 +89,8 @@ const CommentList = ({ articleId }) => {
     };
 
     return (
-        <div>
-            <div>{renderComments()}</div>
+        <>
+            {renderComments()}
             <div style={{ marginTop: '20px' }}>
                 {!createCommentClicked ? (
                     <button
@@ -112,7 +112,7 @@ const CommentList = ({ articleId }) => {
                     />
                 ) : null}
             </div>
-        </div>
+        </>
     );
 };
 
