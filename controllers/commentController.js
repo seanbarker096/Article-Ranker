@@ -1,16 +1,3 @@
-// const Comment = require('../models/commentModel');
-// const factory = require('./handlerFactory');
-
-// exports.getComments = factory.getMany(Comment, { limit: 10 });
-
-// exports.createComment = factory.createOne(Comment);
-
-// exports.updateComment = factory.updateOne(Comment, true);
-
-// exports.deleteComment = factory.deleteOne(Comment, true);
-
-// exports.incrementVote = factory.incrementVote(Comment);
-
 const Comment = require('../models/commentModel');
 const factory = require('./handlerFactory');
 const catchAsync = require('../utils/catchAsync');

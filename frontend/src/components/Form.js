@@ -20,13 +20,11 @@ const ArticleForm = ({
     const formError = useSelector(
         (state) => state.entities[resourceType].errors[errorType]
     );
-    console.log('formerror', formError);
     const requestStatus = useSelector(
         (state) => state.entities[resourceType].status
     );
 
     const stateRef = useRef();
-    const stateRef2 = useRef();
     stateRef.current = requestStatus;
 
     const handleSubmit = async (e) => {

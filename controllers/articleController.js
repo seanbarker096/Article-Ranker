@@ -1,18 +1,3 @@
-// const Article = require('../models/articleModel');
-// const factory = require('./handlerFactory');
-
-// exports.getArticles = factory.getMany(Article, { limit: 10 });
-
-// exports.createArticle = factory.createOne(Article);
-
-// exports.getArticle = factory.getOne(Article, true);
-
-// exports.deleteArticle = factory.deleteOne(Article, true);
-
-// exports.updateArticle = factory.updateOne(Article, true);
-
-// exports.incrementVote = factory.incrementVote(Article);
-
 const Article = require('../models/articleModel');
 const factory = require('./handlerFactory');
 const catchAsync = require('../utils/catchAsync');

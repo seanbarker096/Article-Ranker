@@ -1,32 +1,3 @@
-// const express = require('express');
-// const passport = require('passport');
-// const cookieParser = require('cookie-parser');
-// const authRouter = require('./routes/authRoutes');
-// const googleAuthRouter = require('./routes/googleAuthRoutes');
-// const userRouter = require('./routes/userRoutes');
-// const commentRouter = require('./routes/commentRoutes');
-// const articleRouter = require('./routes/articleRoutes');
-// require('./services/passport.js');
-// const globalErrorHandler = require('./controllers/errorController');
-
-// const app = express();
-
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-// app.use(cookieParser());
-
-// app.use(passport.initialize());
-
-// app.use('/api/v1/auth', authRouter);
-// app.use('/api/v1/auth/google', googleAuthRouter);
-// app.use('/api/v1/users', userRouter);
-// app.use('/api/v1/comments', commentRouter);
-// app.use('/api/v1/articles', articleRouter);
-
-// app.use(globalErrorHandler);
-
-// module.exports = app;
-
 const express = require('express');
 const passport = require('passport');
 const path = require('path');

@@ -131,7 +131,6 @@ export const getUserAnalytics = createAsyncThunk(
     'users/getAnalytics',
     async (args, thunkAPI) => {
         const { userId } = args;
-        console.log(userId);
         try {
             //get user stats
             // const userStats = (await axios.get(`users/${userId}/stats`)).data.data
@@ -162,7 +161,6 @@ export const getArticles = createAsyncThunk(
     async (args, thunkAPI) => {
         try {
             let res = await axios.get('/articles');
-            console.log(res);
             res = res.data.data.docs;
             const normalizedRes = normalize(res, 'articles');
             //normalized data distributed to all action creators to handle their respective parts

@@ -21,7 +21,6 @@ class ajaxForm {
         //the error is associated with.
         //This ensure error only rendered on that resource (e.g. only
         //on the article being deleted rather than all articles)
-        console.log('ajac form error', error);
         if (error && currentResourceId) {
             if (!error.resourceId) {
                 throw new Error(

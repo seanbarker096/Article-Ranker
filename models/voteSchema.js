@@ -1,16 +1,3 @@
-// //subdoc schema for storing votes on user object
-// const mongoose = require('mongoose');
-
-// // const arraySchema = new mongoose.Schema({
-// //     score: Number,
-// // });
-
-// const voteSchema = new mongoose.Schema({
-//     resourceId: mongoose.Schema.Types.ObjectId,
-//     vote: Number,
-// });
-// module.exports = voteSchema;
-
 //subdoc schema for storing votes on user object
 const mongoose = require('mongoose');
 const AppError = require('../utils/appError');

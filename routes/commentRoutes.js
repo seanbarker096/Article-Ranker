@@ -1,36 +1,3 @@
-// const express = require('express');
-// const commentController = require('../controllers/commentController');
-// const authController = require('../controllers/authController');
-// const userController = require('../controllers/userController');
-
-// const router = express.Router({ mergeParams: true });
-
-// router.post(
-//     '/:id/votes/:voteId',
-//     authController.protect,
-//     commentController.incrementVote
-// );
-
-// router.get(
-//     '/myComments',
-//     authController.protect,
-//     userController.getMe,
-//     commentController.getComments
-// );
-
-// router
-//     .route('/')
-//     .post(authController.protect, commentController.createComment)
-//     .get(commentController.getComments);
-
-// //for admins to adjust comments
-// router
-//     .route('/:id')
-//     .patch(authController.protect, commentController.updateComment)
-//     .delete(authController.protect, commentController.deleteComment);
-
-// module.exports = router;
-
 const express = require('express');
 const commentController = require('../controllers/commentController');
 const authController = require('../controllers/authController');

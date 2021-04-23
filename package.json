@@ -5,7 +5,7 @@
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "concurrently \"npm start\" \"npm run client:dev\"",
+        "dev": "set NODE_ENV=development&&concurrently \"npm start\" \"npm run client:dev\"",
         "prod": "set NODE_ENV=production&&concurrently \"npm start\" \"npm run client:prod\"",
         "debug": "concurrently \"npm run server:debug\" \"npm run client:dev\"",
         "start": "node server.js",
